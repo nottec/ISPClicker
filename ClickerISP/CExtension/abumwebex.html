@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slime RPG</title>
+<style>
+    /* Popup overall */
+    body {
+        background-color: #045d56;
+        width: 600px;
+        height: 700px;
+        margin: 0;
+        font-family: sans-serif;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    h1,h2,h3 {
+        margin: 5px 0;
+        font-weight: normal;
+    }
+
+    /* Header */
+    .header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Main Click Area */
+    .mainbox {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #clickButton {
+        font-size: 22px;
+        padding: 15px 25px;
+        border-radius: 8px;
+        background-color: #99c9c9;
+        border: 2px solid #fff;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        margin-bottom: 15px;
+    }
+
+    .stats span {
+        font-weight: bold;
+    }
+
+    /* Upgrade Section */
+    .upgrades {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .upgrades button {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #fff;
+        background-color: #0e8d73;
+        color: white;
+        cursor: pointer;
+    }
+
+    .upgrades span {
+        display: block;
+        margin-top: 3px;
+        font-size: 14px;
+    }
+
+    /* Repair & Reset Buttons */
+    .controls {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .controls button {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid #fff;
+        background-color: #0e8d73;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Scrollbar for upgrades (if overflow) */
+    .upgrades {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Click.er RPG</h1>
+</div>
+
+<div class="mainbox">
+    <div class="stats">
+        <h2>Gold: <span id="goldCount">0</span></h2>
+    </div>
+</div>
+
+<div class="upgrades"></div>
+
+<div class="controls">
+    <button id="resetButton">Reset</button>
+</div>
+
+<script src="dynamicpopup.js"></script>
+</body>
+</html>

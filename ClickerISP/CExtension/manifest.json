@@ -1,0 +1,32 @@
+{
+  "name": "Slime Clicker",
+  "description": "Popup RPG Clicker Extension",
+  "version": "2.0",
+  "manifest_version": 3,
+  "icons": {
+    "128": "images/clicker-128.png"
+  },
+  
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "abumwebex.html"
+  },
+  "permissions": ["storage", "scripting", "activeTab","tabs"],
+  "web_accessible_resources": [{
+  "resources": ["Crimson.gif", "Darkorange.gif", "Purple.gif"],
+  "matches": ["<all_urls>"]
+}]
+}
